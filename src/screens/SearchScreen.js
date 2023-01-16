@@ -16,7 +16,8 @@ const SearchScreen = () => {
   };
 
   return (
-    <View style={{ flex: 1 }}>
+    <>
+      {/* allows content to fit in the entire screen */}
       <SearchBar
         term={term}
         onTermChange={setTerm}
@@ -35,7 +36,7 @@ const SearchScreen = () => {
           title="Big Spender"
         />
       </ScrollView>
-    </View>
+    </>
   );
 };
 
