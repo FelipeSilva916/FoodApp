@@ -5,6 +5,7 @@ import useResults from "../hooks/useResults";
 import ResultsList from "./components/ResultsList";
 
 const SearchScreen = () => {
+  //   console.log(props);
   const [term, setTerm] = useState("");
   const [searchApi, results, errorMessage] = useResults();
 
@@ -23,7 +24,7 @@ const SearchScreen = () => {
         onTermChange={setTerm}
         onTermSubmit={() => searchApi(term)}
       />
-      <Text>We have found {results.length} results</Text>
+
       {errorMessage ? <Text>{errorMessage}</Text> : null}
       <ScrollView>
         <ResultsList
