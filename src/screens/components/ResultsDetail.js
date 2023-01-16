@@ -4,7 +4,7 @@ import { View, Text, StyleSheet, FlatList, Image } from "react-native";
 const ResultsDetail = ({ result }) => {
   return (
     <View>
-      <Text>Result Detail</Text>
+      <Text>{result.name}</Text>
     </View>
   );
 };
