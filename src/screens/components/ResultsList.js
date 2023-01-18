@@ -11,6 +11,10 @@ import { withNavigation } from "react-navigation";
 import ResultsDetail from "./ResultsDetail";
 
 const ResultsList = ({ title, results, navigation }) => {
+  if (!results.length) {
+    return null;
+  } // if there are no results, don't show the title
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>{title}</Text>
